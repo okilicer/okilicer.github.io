@@ -1,12 +1,16 @@
-/* Make page take full height */
+/* Ensure full height layout */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header, footer {
@@ -32,7 +36,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Main content grows to fill space */
 main {
     flex: 1;
     padding: 20px;
