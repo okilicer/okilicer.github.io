@@ -1,46 +1,38 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects - Dr. Your Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Research Projects</h1>
+    </header>
 
-header, footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
 
-nav {
-    background-color: #555;
-    text-align: center;
-    padding: 0.5em 0;
-}
+    <section>
+        <h2>Current Projects</h2>
+        <ul>
+            <li><strong>Project A:</strong> Short description of the project, goals, collaborators.</li>
+            <li><strong>Project B:</strong> Another project with details and progress updates.</li>
+        </ul>
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
+        <h2>Past Projects</h2>
+        <ul>
+            <li><strong>Project X:</strong> Completed project and outcomes.</li>
+        </ul>
+    </section>
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 20px;
-    background: white;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 5px;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-footer p {
-    margin: 0;
-}
+    <footer>
+        <p>&copy; 2025 Dr. Your Name</p>
+    </footer>
+</body>
+</html>
