@@ -2,37 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects - Dr. Your Name</title>
+    <title>Dr. Your Name - Academic Profile</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Research Projects</h1>
+        <h1>Dr. Your Name</h1>
+        <p>Assistant Professor | Department of XYZ | University Name</p>
     </header>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
-        <a href="index.html#publications">Publications</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <section>
-        <h2>Current Projects</h2>
-        <ul>
-            <li><strong>Project A:</strong> Short description of the project, goals, collaborators.</li>
-            <li><strong>Project B:</strong> Another project with details and progress updates.</li>
-        </ul>
+    <main>
+        <section id="home">
+            <h2>Welcome</h2>
+            <p>Welcome to my academic website where I share my research, projects, and publications.</p>
+        </section>
 
-        <h2>Past Projects</h2>
-        <ul>
-            <li><strong>Project X:</strong> Completed project and outcomes.</li>
-        </ul>
-    </section>
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>Author, A. (Year). <em>Title of paper</em>. Journal Name.</li>
+                <li>Author, B. (Year). <em>Title of paper</em>. Conference Name.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: your.email@university.edu</p>
+            <p>Office: Building, Room Number</p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Dr. Your Name</p>
+        <p>&copy; <span id="year"></span> Dr. Your Name</p>
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
