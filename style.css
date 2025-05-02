@@ -1,38 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Projects - Dr. Your Name</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Research Projects</h1>
-    </header>
+/* Make page take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="index.html#publications">Publications</a>
-        <a href="index.html#contact">Contact</a>
-    </nav>
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
 
-    <section>
-        <h2>Current Projects</h2>
-        <ul>
-            <li><strong>Project A:</strong> Short description of the project, goals, collaborators.</li>
-            <li><strong>Project B:</strong> Another project with details and progress updates.</li>
-        </ul>
+nav {
+    background-color: #555;
+    text-align: center;
+    padding: 0.5em 0;
+}
 
-        <h2>Past Projects</h2>
-        <ul>
-            <li><strong>Project X:</strong> Completed project and outcomes.</li>
-        </ul>
-    </section>
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
 
-    <footer>
-        <p>&copy; 2025 Dr. Your Name</p>
-    </footer>
-</body>
-</html>
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content grows to fill space */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+footer p {
+    margin: 0;
+}
