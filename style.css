@@ -1,38 +1,52 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: red; /* red background for entire page */
-    font-family: Arial, sans-serif;
-    color: white; /* default text color white */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8; /* soft light gray */
+    color: #333; /* dark text */
 }
 
 .wrapper {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: black; /* black background inside content area */
+    background-color: #ffffff; /* white content area */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 header {
-    background-color: black;
-    color: white;
-    padding: 20px;
+    background-color: #002147; /* dark blue */
+    color: #ffffff;
+    padding: 30px;
     text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
 }
 
 nav {
-    background-color: black;
-    padding: 10px;
+    background-color: #014f86; /* medium blue */
     text-align: center;
+    padding: 15px;
 }
 
 nav a {
-    margin-right: 15px;
+    margin: 0 15px;
     text-decoration: none;
-    color: white;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -42,12 +56,30 @@ nav a:hover {
 main {
     flex: 1;
     padding: 20px;
+    line-height: 1.6;
+}
+
+section h2 {
+    color: #014f86; /* medium blue headings */
+    border-bottom: 2px solid #014f86;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 footer {
     text-align: center;
     margin-top: auto;
-    padding: 10px 0;
-    background-color: black;
-    color: white;
+    padding: 15px 0;
+    background-color: #002147; /* dark blue footer */
+    color: #ffffff;
+    border-radius: 0 0 8px 8px;
+}
+
+footer a {
+    color: #aad8ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
