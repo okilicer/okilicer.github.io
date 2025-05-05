@@ -1,39 +1,25 @@
-/* Ensure wrapper fills the viewport */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Main takes the available space */
 main {
     flex: 1;
-    width: 100%;
 }
 
-/* Profile container layout */
 .profile-container {
     display: flex;
-    flex-wrap: wrap; /* allows stacking on small screens */
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 30px;
 }
 
-/* Text side */
 .profile-text {
     flex: 1;
-    min-width: 250px;
 }
 
-/* Image side */
 .profile-image img {
     width: 200px;
     height: 200px;
@@ -42,11 +28,9 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer styles */
 footer {
     text-align: center;
     margin-top: auto;
     padding: 10px 0;
     background-color: #f5f5f5;
-    width: 100%;
 }
