@@ -73,6 +73,15 @@ a:focus {
     outline-offset: 2px;
 }
 
+/* Profile photo on the right */
+.profile-photo {
+    float: right;                  /* Float the image to the right */
+    width: 300px;                  /* Set a fixed width for the image */
+    margin: 0 0 15px 20px;         /* Add some margin to the left and bottom */
+    border-radius: 10px;           /* Rounded corners for the image */
+    max-width: 100%;               /* Ensure the image is responsive */
+}
+
 /* Main content */
 main {
     padding: 20px;
@@ -148,5 +157,12 @@ footer a:hover {
     footer a {
         margin: 5px 0;
         display: block;
+    }
+
+    .profile-photo {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 80%;
     }
 }
