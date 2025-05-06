@@ -1,1 +1,66 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dr. Orsan Kilicer - Surface Stokes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Dr. Orsan Kilicer</h1>
+            <p>Department of Mathematics | Texas A&M University</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="machine_learning.html">Machine Learning</a>
+            <a href="publications.html">Publications</a>
+            <a href="surface_stokes.html">Surface Stokes</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <main>
+            <section id="surface-stokes">
+                <h2>Surface Stokes: PhD Thesis Results</h2>
+                <p>
+                    In my PhD thesis, I investigated the mathematical and numerical properties of the Surface Stokes problem, 
+                    which models fluid flow constrained to curved surfaces. This research contributes to understanding 
+                    how tangential flows behave on manifolds and their coupling with surface geometry.
+                </p>
+                <p>
+                    Some key results include:
+                    <ul>
+                        <li>Derivation of well-posed variational formulations for the Surface Stokes equations.</li>
+                        <li>Development of finite element methods on triangulated surfaces.</li>
+                        <li>Convergence analysis and numerical validation on benchmark problems.</li>
+                    </ul>
+                </p>
+
+                <h3>Figures</h3>
+                <p>Below are selected figures illustrating key findings and simulations:</p>
+                
+                <div class="figures">
+                    <img src="fig1.png" alt="Figure 1 description" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
+                    <img src="fig2.png" alt="Figure 2 description" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
+                    <!-- Add more figures as needed -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
+            <p>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> |
+                <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">LinkedIn</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
