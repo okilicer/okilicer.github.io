@@ -1,36 +1,36 @@
-/* Reset some default styles for cross-browser consistency */
+/* Reset for cross-browser consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Smooth scrolling for anchor links */
+/* Enable smooth scrolling for internal links */
 html {
     scroll-behavior: smooth;
 }
 
-/* Ensure the body takes full height */
+/* Base layout: sticky footer setup */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
 }
 
-/* Container for page content */
+/* Main content wrapper grows to fill space */
 .wrapper {
-    flex: 1; /* Allow the wrapper to expand and push footer down */
+    flex: 1;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Header */
+/* Header styles */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -72,7 +72,7 @@ a:focus {
     outline-offset: 2px;
 }
 
-/* Main content */
+/* Main content area */
 main {
     padding: 20px;
     background-color: white;
@@ -86,23 +86,21 @@ main h2 {
     margin-bottom: 10px;
 }
 
-/* Sections */
+/* Sections spacing */
 section {
     margin-bottom: 30px;
 }
 
-/* Profile photo */
+/* Profile image styling */
 .profile-photo {
+    float: right;
     width: 300px;
-    max-width: 100%;
     margin: 0 0 15px 25px;
     border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: 0;
+    max-width: 100%;
 }
 
-/* Publications list */
+/* Publication list */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -116,33 +114,65 @@ ul li em {
     font-style: italic;
 }
 
-/* Footer */
+/* Footer styles */
 footer {
     text-align: center;
-    margin-top: auto; /* Ensures footer stays at the bottom */
+    margin-top: 40px;
     padding: 20px 0;
-    background-color: #222;
-    color: #ddd;
+    background-color: #333;
+    color: white;
     border-radius: 8px;
 }
 
 footer p {
-    display: inline-block;
     margin: 10px 0;
 }
 
 footer a {
-    color: #e0e0e0;
+    color: #f4f4f9;
     text-decoration: none;
     margin: 0 10px;
     font-size: 1rem;
 }
 
 footer a:hover {
-    color: #fff;
+    text-decoration: underline;
 }
 
-/* Responsive design */
+/* Code toggle button */
+#toggle-code {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+#toggle-code:hover {
+    background-color: #004494;
+}
+
+/* Code block hidden/visible state */
+#code-block {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background-color: #f4f4f4;
+    padding: 0 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+#code-block.expanded {
+    max-height: 1000px; /* Big enough for your code block */
+    padding: 15px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
