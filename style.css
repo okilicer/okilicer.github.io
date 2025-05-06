@@ -5,12 +5,12 @@
     box-sizing: border-box;
 }
 
-/* Enable smooth scrolling for internal links */
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Base layout: sticky footer setup */
+/* Sticky footer layout */
 body {
     min-height: 100vh;
     display: flex;
@@ -21,7 +21,7 @@ body {
     line-height: 1.6;
 }
 
-/* Main content wrapper grows to fill space */
+/* Main content wrapper */
 .wrapper {
     flex: 1;
     width: 90%;
@@ -30,7 +30,7 @@ body {
     padding: 20px;
 }
 
-/* Header styles */
+/* Header */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -47,7 +47,7 @@ header p {
     margin-top: 5px;
 }
 
-/* Navigation bar */
+/* Navigation */
 nav {
     background-color: #0056b3;
     padding: 10px;
@@ -72,7 +72,7 @@ a:focus {
     outline-offset: 2px;
 }
 
-/* Main content area */
+/* Main content */
 main {
     padding: 20px;
     background-color: white;
@@ -86,12 +86,12 @@ main h2 {
     margin-bottom: 10px;
 }
 
-/* Sections spacing */
+/* Sections */
 section {
     margin-bottom: 30px;
 }
 
-/* Profile image styling */
+/* Profile photo */
 .profile-photo {
     float: right;
     width: 300px;
@@ -100,7 +100,7 @@ section {
     max-width: 100%;
 }
 
-/* Publication list */
+/* Lists */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -114,7 +114,7 @@ ul li em {
     font-style: italic;
 }
 
-/* Footer styles */
+/* Footer */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -139,40 +139,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Code toggle button */
-#toggle-code {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-#toggle-code:hover {
-    background-color: #004494;
-}
-
-/* Code block hidden/visible state */
-#code-block {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-    background-color: #f4f4f4;
-    padding: 0 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-    overflow-x: auto;
-}
-
-#code-block.expanded {
-    max-height: 1000px; /* Big enough for your code block */
-    padding: 15px;
-}
-
-/* Responsive adjustments */
+/* Responsive design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
