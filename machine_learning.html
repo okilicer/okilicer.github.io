@@ -1,59 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Machine Learning Projects - Dr. Orsan Kilicer</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine Learning Projects - Dr. Orsan Kilicer</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>Machine Learning Projects</h1>
-      <p>Research Highlights and Code Examples</p>
-    </header>
+    <div class="wrapper">
+        <header>
+            <h1>Machine Learning Projects</h1>
+            <p>Research Highlights and Code Examples</p>
+        </header>
 
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="machine_learning.html">Machine Learning</a>
-      <a href="index.html#publications">Publications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="machine_learning.html">Machine Learning</a>
+            <a href="index.html#publications">Publications</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-    <main>
-      <section id="mnist-project">
-        <h2>MNIST TensorFlow Project</h2>
+        <main>
+            <section id="mnist-project">
+                <h2>MNIST TensorFlow Project</h2>
 
-        <h3>Project Description</h3>
-        <p>
-          This project uses TensorFlow to classify handwritten digits from the MNIST dataset.
-          It includes data loading, preprocessing, building a neural network, training, and evaluating accuracy.
-        </p>
+                <h3>Project Description</h3>
+                <p>
+                    This project uses TensorFlow to classify handwritten digits from the MNIST dataset.
+                    It includes data loading, preprocessing, building a neural network, training, and evaluating accuracy.
+                    You can explore both the full PDF explanation and the Jupyter Notebook.
+                </p>
 
-        <h3>Project Files</h3>
-        <ul>
-          <li>
-            📄 <a href="mnist_tensorflow_project.pdf" target="_blank">View the PDF Explanation</a>
-          </li>
-          <li>
-            📥 <a href="mnist_tensorflow_project.ipynb" target="_blank">Download the Jupyter Notebook (.ipynb)</a>
-          </li>
-        </ul>
-      </section>
-    </main>
-  </div>
+                <h3>Project Files</h3>
+                <ul>
+                    <li>
+                        📄 <a href="mnist_tensorflow_project.pdf" target="_blank">View the PDF Explanation</a>
+                    </li>
+                    <li>
+                        📥 <a href="mnist_tensorflow_project.ipynb" target="_blank">Download the Jupyter Notebook (.ipynb)</a>
+                    </li>
+                </ul>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
-    <p>
-      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> |
-      <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">LinkedIn</a>
-    </p>
-  </footer>
+                <h3>Key Code Snippet</h3>
+                <button id="toggle-code" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 25px; cursor: pointer; transition: background-color 0.3s;">
+                    Show Code ⬇️
+                </button>
+                <div id="code-block" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; margin-top: 15px;">
+                    <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 8px; overflow-x: auto;">
+<code>
+import tensorflow as tf
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Flatten
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+# Load data
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+# Normalize
+x_train, x_test = x_train / 255.0, x_test / 255.0
+
+# Build model
+model = Sequential([
+    Flatten(input_shape=(28, 28)),
+    Dense(128, activation='relu'),
+    Dense(10, activation='softmax')
+])
+
+# Compile and train
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.fit(x_train, y_train, epochs=5)
+
+# Evaluate
+test_loss, test_acc = model.evaluate(x_test, y_test)
+print(f"Test accuracy: {test_acc}")
+</code>
+                    </pre>
+                </div>
+
+                <script>
+                    const toggleButton = document.getElementById('toggle-code');
+                    const codeBlock = document.getElementById('code-block');
+
+                    toggleButton.addEventListener('click', () => {
+                        if (codeBlock.style.maxHeight === '0px' || codeBlock.style.maxHeight === '') {
+                            codeBlock.style.maxHeight = codeBlock.scrollHeight + 'px';
+                            toggleButton.textContent = 'Hide Code ⬆️';
+                            toggleButton.style.backgroundColor = '#004494';
+                        } else {
+                            codeBlock.style.maxHeight = '0';
+                            toggleButton.textContent = 'Show Code ⬇️';
+                            toggleButton.style.backgroundColor = '#0056b3';
+                        }
+                    });
+                </script>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
+            <p>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> |
+                <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">LinkedIn</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
