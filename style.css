@@ -105,6 +105,14 @@ footer {
     border-radius: 8px;
 }
 
+/* Aligning footer links to be in a row */
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
 footer a {
     color: #f4f4f9;
     text-decoration: none;
@@ -138,5 +146,14 @@ footer a:hover {
     section img {
         max-width: 100%;
         margin: 0 0 10px 0;
+    }
+
+    footer p {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer a {
+        margin: 5px 0;
     }
 }
