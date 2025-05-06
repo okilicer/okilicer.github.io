@@ -44,7 +44,8 @@
 
                 <h3>Key Code Snippet</h3>
                 <button id="toggle-code">Show Code ⬇️</button>
-                <div id="code-block">
+
+                <div id="code-block" class="collapsed">
                     <pre><code>
 import tensorflow as tf
 from tensorflow.keras.datasets import mnist
@@ -77,7 +78,6 @@ print(f"Test accuracy: {test_acc}")
         </main>
     </div>
 
-    <!-- Footer moved OUTSIDE wrapper -->
     <footer>
         <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
         <p>
@@ -87,21 +87,16 @@ print(f"Test accuracy: {test_acc}")
     </footer>
 
     <script>
+        // Year update
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // Toggle code visibility
         const toggleButton = document.getElementById('toggle-code');
         const codeBlock = document.getElementById('code-block');
 
         toggleButton.addEventListener('click', () => {
-            if (codeBlock.style.maxHeight === '0px' || codeBlock.style.maxHeight === '') {
-                codeBlock.style.maxHeight = codeBlock.scrollHeight + 'px';
-                toggleButton.textContent = 'Hide Code ⬆️';
-                toggleButton.style.backgroundColor = '#004494';
-            } else {
-                codeBlock.style.maxHeight = '0';
-                toggleButton.textContent = 'Show Code ⬇️';
-                toggleButton.style.backgroundColor = '#0056b3';
-            }
+            const expanded = codeBlock.classList.toggle('expanded');
+            toggleButton.textContent = expanded ? 'Hide Code ⬆️' : 'Show Code ⬇️';
         });
     </script>
 </body>
