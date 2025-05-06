@@ -16,19 +16,21 @@ body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures the body takes up at least full viewport height */
-    padding: 0 20px;  /* Add padding to body to give space around */
 }
 
 /* Container for page content */
 .wrapper {
-    width: 100%;
-    max-width: 1200px;  /* Limit max width to 1200px */
-    margin: 0 auto;  /* Center the wrapper */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    flex-grow: 1;
+}
+
+/* Clearfix to ensure the container element properly contains floated elements */
+.wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Header */
@@ -73,28 +75,46 @@ a:focus {
     outline-offset: 2px;
 }
 
-/* Profile photo on the right */
-.profile-photo {
-    float: right;                  /* Float the image to the right */
-    width: 300px;                  /* Set a fixed width for the image */
-    margin: 0 0 15px 20px;         /* Add some margin to the left and bottom */
-    border-radius: 10px;           /* Rounded corners for the image */
-    max-width: 100%;               /* Ensure the image is responsive */
-}
-
 /* Main content */
 main {
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px; /* Adds some space between the content and footer */
 }
 
 main h2 {
     color: #0056b3;
     font-size: 2rem;
     margin-bottom: 10px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 30px;
+}
+
+/* Profile photo */
+.profile-photo {
+    float: right;
+    width: 300px; /* Adjust width as needed */
+    margin: 0 0 15px 25px; /* Adjust spacing to fit your design */
+    border-radius: 10px;
+    max-width: 100%; /* Ensures responsiveness */
+}
+
+/* Publications list */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li em {
+    font-style: italic;
 }
 
 /* Footer */
@@ -105,7 +125,6 @@ footer {
     background-color: #333;
     color: white;
     border-radius: 8px;
-    margin-bottom: 20px;
 }
 
 footer p {
@@ -149,6 +168,13 @@ footer a:hover {
         padding: 10px;
     }
 
+    .profile-photo {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 80%; /* Ensures the image doesn't overflow on small screens */
+    }
+
     footer p {
         display: block;
         text-align: center;
@@ -157,12 +183,5 @@ footer a:hover {
     footer a {
         margin: 5px 0;
         display: block;
-    }
-
-    .profile-photo {
-        float: none;
-        display: block;
-        margin: 0 auto 20px auto;
-        width: 80%;
     }
 }
