@@ -1,85 +1,71 @@
 body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f8; /* soft light gray */
-    color: #333; /* dark text */
+    background-color: #f8f8f8;
+    color: #333;
 }
 
 .wrapper {
-    max-width: 960px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 30px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff; /* white content area */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
 }
 
 header {
-    background-color: #002147; /* dark blue */
-    color: #ffffff;
-    padding: 30px;
     text-align: center;
-    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.2em;
-}
-
-header p {
-    margin: 5px 0 0;
-    font-size: 1.1em;
+    font-size: 2em;
 }
 
 nav {
-    background-color: #014f86; /* medium blue */
     text-align: center;
-    padding: 15px;
+    margin-bottom: 20px;
 }
 
 nav a {
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
+    color: #007acc;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-main {
-    flex: 1;
-    padding: 20px;
-    line-height: 1.6;
+main section {
+    margin-bottom: 30px;
 }
 
-section h2 {
-    color: #014f86; /* medium blue headings */
-    border-bottom: 2px solid #014f86;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+/* Home section image */
+#home img {
+    float: right;
+    width: 200px;
+    margin: 0 0 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Footer */
 footer {
     text-align: center;
-    margin-top: auto;
-    padding: 15px 0;
-    background-color: #002147; /* dark blue footer */
-    color: #ffffff;
-    border-radius: 0 0 8px 8px;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 40px;
 }
 
-footer a {
-    color: #aad8ff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+/* Responsive design */
+@media (max-width: 600px) {
+    #home img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 150px;
+    }
 }
