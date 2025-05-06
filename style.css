@@ -105,11 +105,9 @@ footer {
     border-radius: 8px;
 }
 
-/* Aligning footer links to be in a row */
+/* Ensuring footer content aligns properly */
 footer p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block; /* Aligns the content as inline-block */
     margin: 10px 0;
 }
 
@@ -149,7 +147,7 @@ footer a:hover {
     }
 
     footer p {
-        flex-direction: column;
+        display: block;  /* Stack footer links vertically on smaller screens */
         text-align: center;
     }
 
