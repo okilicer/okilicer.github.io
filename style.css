@@ -1,72 +1,122 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f4f6f9;
     color: #333;
 }
 
 .wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Header */
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    color: #002855; /* strong academic blue */
 }
 
+header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Navigation */
 nav {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 nav a {
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
-    color: #007acc;
+    color: #0056b3;
+    font-weight: 500;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #003974;
 }
 
+/* Main content */
 main section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-/* Home section image */
-#home img {
-    float: right;
-    width: 200px;
-    margin: 0 0 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+main h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    color: #003974;
+}
+
+main h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #004b87;
+}
+
+main p, main li {
+    font-size: 1.05em;
+}
+
+/* Contact info */
+#contact p {
+    margin: 5px 0;
 }
 
 /* Footer */
 footer {
     text-align: center;
     font-size: 0.9em;
-    color: #666;
-    margin-top: 40px;
+    color: #777;
+    margin-top: 50px;
 }
 
-/* Responsive design */
+/* Links in footer */
+footer a {
+    color: #555;
+}
+
+footer a:hover {
+    color: #222;
+}
+
+/* Profile photo (if used) */
+#home img {
+    float: right;
+    width: 180px;
+    border-radius: 50%;
+    margin: 0 0 20px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
+    .wrapper {
+        margin: 20px;
+        padding: 20px;
+    }
+
     #home img {
         float: none;
         display: block;
-        margin: 10px auto;
-        width: 150px;
+        margin: 0 auto 20px;
+        width: 140px;
     }
 }
