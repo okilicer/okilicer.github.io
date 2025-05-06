@@ -43,12 +43,9 @@
                 </ul>
 
                 <h3>Key Code Snippet</h3>
-                <button id="toggle-code" style="background-color: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 25px; cursor: pointer; transition: background-color 0.3s;">
-                    Show Code ⬇️
-                </button>
-                <div id="code-block" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; margin-top: 15px;">
-                    <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 8px; overflow-x: auto;">
-<code>
+                <button id="toggle-code">Show Code ⬇️</button>
+                <div id="code-block">
+                    <pre><code>
 import tensorflow as tf
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.models import Sequential
@@ -74,40 +71,38 @@ model.fit(x_train, y_train, epochs=5)
 # Evaluate
 test_loss, test_acc = model.evaluate(x_test, y_test)
 print(f"Test accuracy: {test_acc}")
-</code>
-                    </pre>
+                    </code></pre>
                 </div>
-
-                <script>
-                    const toggleButton = document.getElementById('toggle-code');
-                    const codeBlock = document.getElementById('code-block');
-
-                    toggleButton.addEventListener('click', () => {
-                        if (codeBlock.style.maxHeight === '0px' || codeBlock.style.maxHeight === '') {
-                            codeBlock.style.maxHeight = codeBlock.scrollHeight + 'px';
-                            toggleButton.textContent = 'Hide Code ⬆️';
-                            toggleButton.style.backgroundColor = '#004494';
-                        } else {
-                            codeBlock.style.maxHeight = '0';
-                            toggleButton.textContent = 'Show Code ⬇️';
-                            toggleButton.style.backgroundColor = '#0056b3';
-                        }
-                    });
-                </script>
             </section>
         </main>
-
-        <footer>
-            <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
-            <p>
-                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> |
-                <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">LinkedIn</a>
-            </p>
-        </footer>
     </div>
+
+    <!-- Footer moved OUTSIDE wrapper -->
+    <footer>
+        <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
+        <p>
+            <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> |
+            <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        const toggleButton = document.getElementById('toggle-code');
+        const codeBlock = document.getElementById('code-block');
+
+        toggleButton.addEventListener('click', () => {
+            if (codeBlock.style.maxHeight === '0px' || codeBlock.style.maxHeight === '') {
+                codeBlock.style.maxHeight = codeBlock.scrollHeight + 'px';
+                toggleButton.textContent = 'Hide Code ⬆️';
+                toggleButton.style.backgroundColor = '#004494';
+            } else {
+                codeBlock.style.maxHeight = '0';
+                toggleButton.textContent = 'Show Code ⬇️';
+                toggleButton.style.backgroundColor = '#0056b3';
+            }
+        });
     </script>
 </body>
 </html>
