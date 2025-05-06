@@ -26,13 +26,6 @@ body {
     padding: 20px;
 }
 
-/* Clearfix to ensure the container element properly contains floated elements */
-.wrapper::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /* Header */
 header {
     text-align: center;
