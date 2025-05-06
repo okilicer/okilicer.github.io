@@ -10,9 +10,12 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Global font and background */
+/* Ensure the body takes full height */
 body {
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
@@ -20,6 +23,7 @@ body {
 
 /* Container for page content */
 .wrapper {
+    flex: 1; /* Allow the wrapper to expand and push footer down */
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -89,11 +93,13 @@ section {
 
 /* Profile photo */
 .profile-photo {
-    float: right;
     width: 300px;
+    max-width: 100%;
     margin: 0 0 15px 25px;
     border-radius: 10px;
-    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 /* Publications list */
@@ -113,10 +119,10 @@ ul li em {
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 40px;
+    margin-top: auto; /* Ensures footer stays at the bottom */
     padding: 20px 0;
-    background-color: #333;
-    color: white;
+    background-color: #222;
+    color: #ddd;
     border-radius: 8px;
 }
 
@@ -126,14 +132,14 @@ footer p {
 }
 
 footer a {
-    color: #f4f4f9;
+    color: #e0e0e0;
     text-decoration: none;
     margin: 0 10px;
     font-size: 1rem;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #fff;
 }
 
 /* Responsive design */
