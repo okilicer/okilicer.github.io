@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -43,9 +44,29 @@ main section {
     margin-bottom: 30px;
 }
 
+/* Home section image */
+#home img {
+    float: right;
+    width: 200px;
+    margin: 0 0 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
 footer {
     text-align: center;
     font-size: 0.9em;
     color: #666;
     margin-top: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    #home img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        width: 150px;
+    }
 }
