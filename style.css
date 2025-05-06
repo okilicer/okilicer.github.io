@@ -5,7 +5,12 @@
     box-sizing: border-box;
 }
 
-/* Set global font-family and background color */
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global font and background */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -13,7 +18,7 @@ body {
     line-height: 1.6;
 }
 
-/* Container to center the page and provide max-width */
+/* Container for page content */
 .wrapper {
     width: 90%;
     max-width: 1200px;
@@ -21,7 +26,7 @@ body {
     padding: 20px;
 }
 
-/* Header styles */
+/* Header */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -38,7 +43,7 @@ header p {
     margin-top: 5px;
 }
 
-/* Navigation bar styles */
+/* Navigation bar */
 nav {
     background-color: #0056b3;
     padding: 10px;
@@ -53,11 +58,17 @@ nav a {
     font-size: 1.1rem;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
 }
 
-/* Main content styles */
+a:focus {
+    outline: 2px dashed #ffcc00;
+    outline-offset: 2px;
+}
+
+/* Main content */
 main {
     padding: 20px;
     background-color: white;
@@ -71,17 +82,21 @@ main h2 {
     margin-bottom: 10px;
 }
 
-/* Section-specific styles */
+/* Sections */
 section {
     margin-bottom: 30px;
 }
 
-section img {
+/* Profile photo */
+.profile-photo {
+    float: right;
+    width: 250px;
+    margin: 0 0 10px 20px;
     border-radius: 10px;
     max-width: 100%;
 }
 
-/* Publications list styling */
+/* Publications list */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -95,7 +110,7 @@ ul li em {
     font-style: italic;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -105,9 +120,8 @@ footer {
     border-radius: 8px;
 }
 
-/* Ensuring footer content aligns properly */
 footer p {
-    display: inline-block; /* Aligns the content as inline-block */
+    display: inline-block;
     margin: 10px 0;
 }
 
@@ -122,7 +136,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive design: Adjust layout for small screens */
+/* Responsive design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -132,8 +146,14 @@ footer a:hover {
         font-size: 1rem;
     }
 
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     nav a {
-        margin: 0 10px;
+        margin: 5px 10px;
         font-size: 1rem;
     }
 
@@ -141,17 +161,19 @@ footer a:hover {
         padding: 10px;
     }
 
-    section img {
-        max-width: 100%;
-        margin: 0 0 10px 0;
+    .profile-photo {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
     }
 
     footer p {
-        display: block;  /* Stack footer links vertically on smaller screens */
+        display: block;
         text-align: center;
     }
 
     footer a {
         margin: 5px 0;
+        display: block;
     }
 }
