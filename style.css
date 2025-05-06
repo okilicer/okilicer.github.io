@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+/* Ensure that the body and html fill the entire screen */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
@@ -24,6 +31,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    flex-grow: 1; /* Ensures the content area takes up remaining space */
 }
 
 /* Header */
@@ -90,10 +98,10 @@ section {
 /* Profile photo */
 .profile-photo {
     float: right;
-    width: 300px; /* Adjust width as needed */
-    margin: 0 0 15px 25px; /* Adjust spacing to fit your design */
+    width: 300px;
+    margin: 0 0 15px 25px;
     border-radius: 10px;
-    max-width: 100%; /* Ensures responsiveness */
+    max-width: 100%;
 }
 
 /* Publications list */
@@ -110,7 +118,7 @@ ul li em {
     font-style: italic;
 }
 
-/* Footer */
+/* Footer/Footnote */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -118,6 +126,9 @@ footer {
     background-color: #333;
     color: white;
     border-radius: 8px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
@@ -165,7 +176,7 @@ footer a:hover {
         float: none;
         display: block;
         margin: 0 auto 20px auto;
-        width: 80%; /* Ensures the image doesn't overflow on small screens */
+        width: 80%;
     }
 
     footer p {
