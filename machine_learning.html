@@ -28,6 +28,7 @@
         <h3>Project Description</h3>
         <p>
           This project uses TensorFlow to classify handwritten digits from the MNIST dataset.
+          It includes data loading, preprocessing, building a neural network, training, and evaluating accuracy.
         </p>
 
         <h3>Project Files</h3>
@@ -36,40 +37,9 @@
             📄 <a href="mnist_tensorflow_project.pdf" target="_blank">View the PDF Explanation</a>
           </li>
           <li>
-            📥 <a href="mnist_tensorflow_project.ipynb" target="_blank">Download the Jupyter Notebook</a>
+            📥 <a href="mnist_tensorflow_project.ipynb" target="_blank">Download the Jupyter Notebook (.ipynb)</a>
           </li>
         </ul>
-
-        <h3>Key Code Snippet</h3>
-        <button id="toggle-code">Show Code ⬇️</button>
-
-        <div id="code-block" class="collapsed">
-          <pre><code>
-import tensorflow as tf
-from tensorflow.keras.datasets import mnist
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Flatten
-
-(x_train, y_train), (x_test, y_test) = mnist.load_data()
-
-x_train, x_test = x_train / 255.0, x_test / 255.0
-
-model = Sequential([
-    Flatten(input_shape=(28, 28)),
-    Dense(128, activation='relu'),
-    Dense(10, activation='softmax')
-])
-
-model.compile(optimizer='adam',
-              loss='sparse_categorical_crossentropy',
-              metrics=['accuracy'])
-
-model.fit(x_train, y_train, epochs=5)
-
-test_loss, test_acc = model.evaluate(x_test, y_test)
-print(f"Test accuracy: {test_acc}")
-          </code></pre>
-        </div>
       </section>
     </main>
   </div>
@@ -84,14 +54,6 @@ print(f"Test accuracy: {test_acc}")
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    const toggleButton = document.getElementById("toggle-code");
-    const codeBlock = document.getElementById("code-block");
-
-    toggleButton.addEventListener("click", () => {
-      const expanded = codeBlock.classList.toggle("expanded");
-      toggleButton.textContent = expanded ? "Hide Code ⬆️" : "Show Code ⬇️";
-    });
   </script>
 </body>
 </html>
