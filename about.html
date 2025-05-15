@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dr. Orsan Kilicer's academic profile including biography, teaching, research focus, and achievements.">
+    <meta name="description" content="Dr. Orsan Kilicer's academic profile including biography, teaching, research focus, and interests.">
     <title>Dr. Orsan Kilicer - About Me</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 1em;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .gallery-caption {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 0.3em;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -17,25 +36,62 @@
             <a href="index.html">Home</a>
             <a href="about.html" class="active">About</a>
             <a href="machine_learning.html">Machine Learning</a>
-            <a href="index.html#publications">Publications</a>
+            <a href="publications.html">Publications</a>
             <a href="contact.html">Contact</a>
         </nav>
 
         <main>
             <section>
                 <h2>Biography</h2>
-                <p>Dr. Orsan Kilicer is a Ph.D. Candidate at the Department of Mathematics, Texas A&M University.</p>
-                <p>Dr. Kilicer has received several awards for his research and teaching.</p>
+                <p>Dr. Orsan Kilicer is a recent Ph.D. graduate from the Department of Mathematics, Texas A&M University. His academic interests include scientific computing, applied mathematics, and deep learning.</p>
+                <p>He also enjoys studying philosophy and history. One of his inspirations is the Stoic philosopher-emperor Marcus Aurelius.</p>
 
-                <h2>Teaching</h2>
-                <p>Dr. Kilicer currently teaches courses in machine learning, data analysis, and mathematical modeling. His teaching philosophy emphasizes practical, hands-on learning and critical thinking. He is committed to helping students develop both the theoretical and practical skills necessary to excel in modern mathematical and computational fields.</p>
-                <p>Notable student projects include...</p>
+                <figure>
+                    <img src="marcus_aurelius_efes.jpg" alt="Marcus Aurelius statue in Ephesus" style="width: 250px; border-radius: 10px;">
+                    <figcaption style="font-size: 0.9em; color: #555;">
+                        Marcus Aurelius statue at Ephesus Ancient City
+                        (<a href="https://commons.wikimedia.org/wiki/File:Statue_of_Marcus_Aurelius,_Ephesus_Museum.jpg" target="_blank">source: Wikimedia Commons</a>)
+                    </figcaption>
+                </figure>
+            </section>
 
-                <h2>Interest in History</h2>
-                <p>Dr. Kilicer has a deep interest in history, particularly in Stoic philosophy. He admires figures such as Marcus Aurelius, whose writings continue to influence modern thought on leadership, ethics, and personal resilience.</p>
-                <p>Here is an image of Marcus Aurelius, the Roman Emperor and Stoic philosopher, depicted in a statue from the ancient city of Ephesus:</p>
-                <img src="https://www.alamy.com/stock-photo-marble-bust-of-marcus-aurelius-roman-emperor-at-ephesus-museum-turkey-54808986.html" alt="Marcus Aurelius Statue from Ephesus" width="300" height="400">
-                <p><small>Image: <a href="https://www.alamy.com/stock-photo-marble-bust-of-marcus-aurelius-roman-emperor-at-ephesus-museum-turkey-54808986.html" target="_blank">Marcus Aurelius Statue at Ephesus Museum</a></small></p>
+            <section>
+                <h2>Travels</h2>
+                <p>Exploring different cultures and landscapes has always been a personal passion of mine. Here are a few highlights from my travels:</p>
+                <div class="gallery">
+                    <div>
+                        <img src="austin.jpg" alt="Austin">
+                        <div class="gallery-caption">Austin</div>
+                    </div>
+                    <div>
+                        <img src="college_station.jpg" alt="College Station">
+                        <div class="gallery-caption">College Station</div>
+                    </div>
+                    <div>
+                        <img src="prague.jpg" alt="Prague">
+                        <div class="gallery-caption">Prague</div>
+                    </div>
+                    <div>
+                        <img src="bodrum.jpg" alt="Bodrum">
+                        <div class="gallery-caption">Bodrum</div>
+                    </div>
+                    <div>
+                        <img src="didyma.jpg" alt="Didyma">
+                        <div class="gallery-caption">Didyma</div>
+                    </div>
+                    <div>
+                        <img src="trabzon.jpg" alt="Trabzon">
+                        <div class="gallery-caption">Trabzon</div>
+                    </div>
+                    <div>
+                        <img src="tbilisi.jpg" alt="Tbilisi">
+                        <div class="gallery-caption">Tbilisi</div>
+                    </div>
+                    <div>
+                        <img src="ankara.jpg" alt="Ankara">
+                        <div class="gallery-caption">Ankara</div>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
@@ -43,8 +99,8 @@
     <footer>
         <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
         <p>
-            <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> |
-            <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=UDN1JFMAAAAJ" target="_blank">Google Scholar</a> |
+            <a href="https://www.linkedin.com/in/orsan-kilicer" target="_blank">LinkedIn</a>
         </p>
     </footer>
 
