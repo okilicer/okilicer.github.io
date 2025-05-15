@@ -1,66 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Publications by Dr. Orsan Kilicer in scientific computing, applied mathematics, and machine learning."/>
-  <title>Dr. Orsan Kilicer - Publications</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Orsan Kilicer's academic publications and research papers.">
+    <title>Dr. Orsan Kilicer - Publications</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>Dr. Orsan Kilicer</h1>
-      <div class="subtitle">Department of Mathematics | Texas A&M University</div>
-    </header>
+    <div class="wrapper">
+        <header>
+            <h1>Publications</h1>
+            <div class="subtitle">Dr. Orsan Kilicer | Department of Mathematics | Texas A&M University</div>
+        </header>
 
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="machine_learning.html">Machine Learning</a>
-      <a href="publications.html" class="active">Publications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="machine_learning.html">Machine Learning</a>
+            <a href="publications.html" class="active">Publications</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-    <main>
-      <section>
-        <h2>Selected Publications & Thesis</h2>
-        <ul>
-          <li>
-            <strong>Nonlocal operators with local boundary conditions in higher dimensions</strong><br/>
-            B. Aksoylu, F. Celiker, O. Kilicer<br/>
-            <em>Advances in Computational Mathematics</em>, 45, 453–492 (2019).<br/>
-            <a href="https://doi.org/10.1007/s10444-018-9624-6" target="_blank">DOI: 10.1007/s10444-018-9624-6</a>
-          </li>
+        <main>
+            <section id="publications">
+                <h3>Research Publications</h3>
 
-          <li>
-            <strong>Higher Order FEM for Surface Stokes Problems</strong><br/>
-            Ph.D. Dissertation, Texas A&M University, May 8, 2025.<br/>
-            Advisor: Dr. Alan Demlow
-          </li>
+                <ul>
+                    <!-- Thesis -->
+                    <li>
+                        <strong>Kilicer, O. (2025). <em>Higher Order FEM for Surface Stokes Problems</em>.</strong> Ph.D. Thesis, Texas A&M University.
+                    </li>
 
-          <li>
-            <strong>Higher Order Finite Element Methods for Surface Stokes Problems</strong><br/>
-            O. Kilicer, A. Demlow<br/>
-            <em>(In preparation)</em>
-          </li>
-        </ul>
+                    <!-- In preparation paper -->
+                    <li>
+                        <strong>Kilicer, O., & Demlow, A. (In preparation). <em>Higher Order FEM for Surface Stokes Problems</em>.</strong> Journal or Conference Name.
+                    </li>
 
-        <p>For a complete and updated list, visit my <a href="https://scholar.google.com/citations?user=UDN1JFMAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
-      </section>
-    </main>
+                    <!-- Collaborative Paper with Aksoylu and Celiker -->
+                    <li>
+                        <strong>Aksoylu, B., Celiker, F., & Kilicer, O. (2019). <em>Nonlocal operators with local boundary conditions in higher dimensions</em>.</strong> <em>Advances in Computational Mathematics, 45</em>, 453–492. <a href="https://doi.org/10.1007/s10444-018-9624-6" target="_blank">https://doi.org/10.1007/s10444-018-9624-6</a>
+                    </li>
 
-    <footer>
-      <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
-      <p>
-        <a href="https://scholar.google.com/citations?user=UDN1JFMAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-        <a href="https://www.linkedin.com/in/orsan-kilicer" target="_blank">LinkedIn</a>
-      </p>
-    </footer>
-  </div>
+                    <!-- Book Chapter -->
+                    <li>
+                        <strong>Aksoylu, B., Celiker, F., & Kilicer, O. (2021). <em>Nonlocal operators with local boundary conditions: an overview</em>.</strong> In <em>Recent Advances in Mathematical Modelling and Computational Science</em>, pp. 133-150. Springer.
+                    </li>
+                </ul>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+                <h3>Conference and Journal Submissions</h3>
+                <p>Currently in the process of submitting additional papers related to my thesis and ongoing research in the field of scientific computing and machine learning.</p>
+
+            </section>
+
+            <section id="talks">
+                <h3>Talks & Presentations</h3>
+                <ul>
+                    <li>
+                        <strong>Kilicer, O. (2024). <em>Higher Order Finite Element Methods for Surface Stokes Problems</em>.</strong> Presented at the Finite Element Rodeo, University of Houston, Houston, TX.
+                    </li>
+                    <!-- Add more talks as they happen -->
+                </ul>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
+            <p>
+                <a href="https://scholar.google.com/citations?user=UDN1JFMAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a> |
+                <a href="https://www.linkedin.com/in/orsan-kilicer" target="_blank">LinkedIn</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
