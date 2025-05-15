@@ -104,3 +104,49 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Gallery layout for travel photos */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
+    gap: 15px;
+    margin-top: 1em;
+}
+
+.gallery img {
+    width: 110%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery-caption {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 0.3em;
+    color: #444;
+}
+
+/* Individual city travel section */
+.city-section {
+    margin-top: 2em;
+}
+
+.city-section h3 {
+    color: #0056b3;
+}
+
+.city-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 0.5em;
+}
+
+/* Austin-specific larger photo styling */
+#austin-section img {
+    width: 200%;
+    max-width: none;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
