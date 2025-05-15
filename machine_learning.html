@@ -16,8 +16,8 @@
         <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="machine_learning.html">Machine Learning</a>
-            <a href="index.html#publications">Publications</a>
+            <a href="machine_learning.html" class="active">Machine Learning</a>
+            <a href="publications.html">Publications</a>
             <a href="contact.html">Contact</a>
         </nav>
 
@@ -61,10 +61,10 @@ from tensorflow.keras.layers import Dense, Flatten
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
 # Build model
-model = Sequential([
-    Flatten(input_shape=(28, 28)),
-    Dense(128, activation='relu'),
-    Dense(10, activation='softmax')
+model = Sequential([ 
+    Flatten(input_shape=(28, 28)), 
+    Dense(128, activation='relu'), 
+    Dense(10, activation='softmax') 
 ])
 
 # Compile and train
