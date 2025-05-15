@@ -144,9 +144,7 @@ footer a:hover {
 
 /* Austin-specific larger photo styling */
 #austin-section img {
-    width: 200%;
-    max-width: none;
-    display: block;
-    margin: 1rem auto;
+    width: 150%;
+    height: auto;
     border-radius: 10px;
 }
