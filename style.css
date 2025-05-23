@@ -1,10 +1,9 @@
-/* General Reset and Base */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
     background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
 .wrapper {
@@ -18,16 +17,6 @@ body {
 header {
     text-align: center;
     margin-bottom: 2rem;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.2rem;
-}
-
-.subtitle {
-    font-size: 1.1rem;
-    color: #666;
 }
 
 /* Navigation */
@@ -52,45 +41,45 @@ nav a.active {
     text-decoration: underline;
 }
 
-/* Main Content */
+/* Headings */
 main h2 {
     color: #005a9c;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-main h3 {
-    margin-top: 2rem;
-    border-top: 1px solid #ccc;
-    padding-top: 1rem;
-    color: #444;
+/* Code Toggle Button */
+.toggle-btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    margin-top: 0.5rem;
 }
 
-.spaced-paragraph {
-    margin-top: 1.5rem;
+.toggle-btn:hover {
+    background-color: #004494;
 }
 
-/* Profile Image */
-.profile-photo {
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 1rem;
+/* Collapsible Code Section */
+.code-block {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 10px;
 }
 
-.profile-caption {
-    text-align: center;
-    font-size: 0.95em;
-    color: #555;
-    margin-top: -0.8rem;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-}
-
-/* Lists */
-ul {
-    padding-left: 1.5rem;
+.code-block pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 /* Footer */
@@ -111,60 +100,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* Travel Section */
-.city-section {
-    margin-top: 2em;
-}
-
-.city-section h3 {
-    color: #0056b3;
-}
-
-.city-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 0.5em;
-}
-
-.gallery-caption {
-    text-align: center;
-    font-size: 0.9em;
-    margin-top: 0.3em;
-    color: #444;
-}
-
-/* Toggle Button Styling */
-.toggle-btn {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 1rem;
-}
-
-.toggle-btn:hover {
-    background-color: #004494;
-}
-
-/* Code Container Styling */
-.code-container {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    margin-top: 15px;
-}
-
-.code-container pre {
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-size: 0.95rem;
-    line-height: 1.4;
 }
