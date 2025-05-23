@@ -85,10 +85,21 @@ model.evaluate(test_dataset)</code></pre>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
         function toggleCode(id) {
             const block = document.getElementById(id);
-            const isVisible = block.style.maxHeight && block.style.maxHeight !== '0px';
-            block.style.maxHeight = isVisible ? '0' : block.scrollHeight + 'px';
+            const button = document.querySelector(`button[onclick*="${id}"]`);
+            const isOpen = block.classList.contains('expanded');
+
+            if (isOpen) {
+                block.classList.remove('expanded');
+                button.textContent = 'Show Code ⬇️';
+                button.style.backgroundColor = '#0056b3';
+            } else {
+                block.classList.add('expanded');
+                button.textContent = 'Hide Code ⬆️';
+                button.style.backgroundColor = '#004494';
+            }
         }
     </script>
 </body>
