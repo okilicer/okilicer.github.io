@@ -61,11 +61,25 @@ model.evaluate(x_test, y_test)</code></pre>
 
             <section>
                 <h2>BERT Disaster Tweet Classification</h2>
-                <p>Fine-tuned BERT using Hugging Face Transformers on a Kaggle tweet dataset to classify disaster-related content. Focused on low-compute model tuning.</p>
+                <h3>Project Description</h3>
+                <p>
+                    This project applies transfer learning with BERT (using Hugging Face Transformers) to classify disaster-related tweets.
+                    The dataset was sourced from Kaggle and includes labeled tweets. The model was fine-tuned using a pretrained BERT base,
+                    followed by evaluation on test data. The goal was to experiment with minimal compute on Kaggle GPU.
+                </p>
+                <h3>Skills Highlighted</h3>
+                <ul>
+                    <li>Natural Language Processing (NLP)</li>
+                    <li>BERT and Transfer Learning</li>
+                    <li>Text Preprocessing</li>
+                    <li>Model Evaluation</li>
+                </ul>
+                 <h3>Project Files</h3>
                 <ul>
                     <li><a href="bert-disaster-tweet_lower_acc.pdf" target="_blank">📄 PDF Explanation</a></li>
                     <li><a href="bert-disaster-tweet_lower_acc.ipynb" target="_blank">📥 Jupyter Notebook</a></li>
                 </ul>
+                 <h3>Key Code Snippet</h3>
                 <button class="toggle-btn" onclick="toggleCode('bert-code')">Show Code ⬇️</button>
                 <div class="code-block" id="bert-code">
 <pre><code>from transformers import BertTokenizer, TFBertForSequenceClassification
@@ -81,6 +95,7 @@ model.compile(optimizer=Adam(learning_rate=2e-5), loss=model.compute_loss, metri
 model.fit(train_dataset, validation_data=val_dataset, epochs=2)
 model.evaluate(test_dataset)</code></pre>
                 </div>
+                <p>Pages or downloads for these projects coming soon.</p>
             </section>
         </main>
 
