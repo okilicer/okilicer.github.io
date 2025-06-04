@@ -7,9 +7,10 @@ body {
     line-height: 1.6;
 }
 
-/* Wrapper */
+/* Wrapper - Wider layout */
 .wrapper {
-    max-width: 900px;
+    max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
     padding: 1.5rem;
     background-color: #fff;
@@ -60,7 +61,6 @@ main h3 {
     margin-bottom: 0.75rem;
 }
 
-/* Section spacing */
 main section {
     margin-bottom: 3rem;
 }
@@ -110,7 +110,7 @@ img {
 }
 
 .code-block.expanded {
-    max-height: 1000px; /* Arbitrary large value */
+    max-height: 1000px;
     padding: 10px 0;
 }
 
@@ -143,4 +143,17 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
 }
