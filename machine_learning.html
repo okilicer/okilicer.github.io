@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Dr. Orsan Kilicer's machine learning projects including MNIST, BERT tweet classification, and time-series forecasting.">
     <title>Machine Learning Projects - Dr. Orsan Kilicer</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,7 +14,7 @@
             <p>Research Highlights and Code Examples</p>
         </header>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="machine_learning.html" class="active">Machine Learning</a>
@@ -22,6 +23,7 @@
         </nav>
 
         <main>
+            <!-- MNIST Project -->
             <section>
                 <h2>MNIST TensorFlow Project</h2>
 
@@ -32,18 +34,20 @@
                     You can explore both the full PDF explanation and the Jupyter Notebook.
                 </p>
 
-                    <h3>Skills Highlighted</h3>
-    <ul>
-        <li>Image Classification</li>
-        <li>Neural Networks with TensorFlow</li>
-        <li>Data Normalization and Preprocessing</li>
-        <li>Model Evaluation and Metrics</li>
-    </ul>
+                <h3>Skills Highlighted</h3>
+                <ul>
+                    <li>Image Classification</li>
+                    <li>Neural Networks with TensorFlow</li>
+                    <li>Data Normalization and Preprocessing</li>
+                    <li>Model Evaluation and Metrics</li>
+                </ul>
+
                 <h3>Project Files</h3>
                 <ul>
                     <li><a href="mnist_tensorflow_project.pdf" target="_blank">📄 PDF Explanation</a></li>
                     <li><a href="mnist_tensorflow_project.ipynb" target="_blank">📥 Jupyter Notebook</a></li>
                 </ul>
+
                 <h3>Key Code Snippet</h3>
                 <button class="toggle-btn" onclick="toggleCode('mnist-code')">Show Code ⬇️</button>
                 <div class="code-block" id="mnist-code">
@@ -67,14 +71,17 @@ model.evaluate(x_test, y_test)</code></pre>
                 </div>
             </section>
 
+            <!-- BERT Project -->
             <section>
                 <h2>BERT Disaster Tweet Classification</h2>
+
                 <h3>Project Description</h3>
                 <p>
                     This project applies transfer learning with BERT (using Hugging Face Transformers) to classify disaster-related tweets.
                     The dataset was sourced from Kaggle and includes labeled tweets. The model was fine-tuned using a pretrained BERT base,
                     followed by evaluation on test data. The goal was to experiment with minimal compute on Kaggle GPU.
                 </p>
+
                 <h3>Skills Highlighted</h3>
                 <ul>
                     <li>Natural Language Processing (NLP)</li>
@@ -82,12 +89,14 @@ model.evaluate(x_test, y_test)</code></pre>
                     <li>Text Preprocessing</li>
                     <li>Model Evaluation</li>
                 </ul>
-                 <h3>Project Files</h3>
+
+                <h3>Project Files</h3>
                 <ul>
                     <li><a href="bert-disaster-tweet_lower_acc.pdf" target="_blank">📄 PDF Explanation</a></li>
                     <li><a href="bert-disaster-tweet_lower_acc.ipynb" target="_blank">📥 Jupyter Notebook</a></li>
                 </ul>
-                 <h3>Key Code Snippet</h3>
+
+                <h3>Key Code Snippet</h3>
                 <button class="toggle-btn" onclick="toggleCode('bert-code')">Show Code ⬇️</button>
                 <div class="code-block" id="bert-code">
 <pre><code>from transformers import BertTokenizer, TFBertForSequenceClassification
@@ -103,14 +112,64 @@ model.compile(optimizer=Adam(learning_rate=2e-5), loss=model.compute_loss, metri
 model.fit(train_dataset, validation_data=val_dataset, epochs=2)
 model.evaluate(test_dataset)</code></pre>
                 </div>
-                <p>Pages or downloads for these projects coming soon.</p>
+            </section>
+
+            <!-- GRU + RF Bike Forecast Project -->
+            <section>
+                <h2>Bike Sharing Demand: GRU + Random Forest</h2>
+
+                <h3>Project Description</h3>
+                <p>
+                    This project applies time-series modeling to the Kaggle Bike Sharing Demand dataset using a Bidirectional GRU neural network and ensemble methods like Random Forest and Gradient Boosting.
+                    The goal was to predict hourly bike rental counts by extracting time-based features and engineering sequences for deep learning. Early stopping and dropout regularization were also used to avoid overfitting.
+                </p>
+
+                <h3>Skills Highlighted</h3>
+                <ul>
+                    <li>Time Series Forecasting</li>
+                    <li>Bidirectional GRU with TensorFlow/Keras</li>
+                    <li>Random Forest and Gradient Boosting (Scikit-learn)</li>
+                    <li>Feature Engineering from Timestamps</li>
+                    <li>Sequence Generation for RNN Input</li>
+                    <li>Model Evaluation with RMSLE</li>
+                </ul>
+
+                <h3>Project Files</h3>
+                <ul>
+                    <li><a href="time-series-gru-bike-and-rf.pdf" target="_blank">📄 PDF Explanation</a></li>
+                    <li><a href="time-series-gru-bike-and-rf.ipynb" target="_blank">📥 Jupyter Notebook</a></li>
+                </ul>
+
+                <h3>Key Code Snippet</h3>
+                <button class="toggle-btn" onclick="toggleCode('bike-code')">Show Code ⬇️</button>
+                <div class="code-block" id="bike-code">
+<pre><code>model = Sequential()
+model.add(Bidirectional(GRU(512, return_sequences=True),
+          input_shape=(look_back, len(features))))
+model.add(Bidirectional(GRU(128)))
+model.add(Dense(1))  # Output: predicted log(count)
+model.compile(optimizer='adam', loss='mean_squared_error')
+
+early_stop = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
+
+history = model.fit(
+    X_train_final, y_train_final,
+    validation_data=(X_val, y_val),
+    epochs=1000,
+    batch_size=32,
+    callbacks=[early_stop],
+    verbose=1
+)</code></pre>
+                </div>
             </section>
         </main>
 
         <footer>
             <p>&copy; <span id="year"></span> Dr. Orsan Kilicer</p>
-            <p><a href="https://scholar.google.com/citations?user=UDN1JFMAAAAJ" target="_blank">Google Scholar</a> |
-            <a href="https://www.linkedin.com/in/orsan-kilicer" target="_blank">LinkedIn</a></p>
+            <p>
+                <a href="https://scholar.google.com/citations?user=UDN1JFMAAAAJ" target="_blank">Google Scholar</a> |
+                <a href="https://www.linkedin.com/in/orsan-kilicer" target="_blank">LinkedIn</a>
+            </p>
         </footer>
     </div>
 
